@@ -16,23 +16,21 @@ using System.Windows.Shapes;
 namespace CalculateKomNed
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ControlPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ControlPage : Page
     {
-        public MainWindow()
+        public ControlPage()
         {
             InitializeComponent();
-            Manager.MainFrame = Frame;
-            Manager.MainFrame.Navigate(new ControlPage());
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
+        private void btnFiz_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager.MainFrame.Navigate(new CalculatPage());
         }
 
-        private void btnQuit_Click(object sender, RoutedEventArgs e)
+        private void btnUr_Click(object sender, RoutedEventArgs e)
         {
 
         }

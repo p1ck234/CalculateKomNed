@@ -1,0 +1,55 @@
+﻿<Page x:Class="CalculateKomNed.CalculatPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CalculateKomNed"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CalculatPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" 
+                   Text="Кадастровая стоимость недвижимости: "
+                   FontSize="20" HorizontalAlignment="Center"
+                   VerticalAlignment="Center" FontFamily="Tahoma"/>
+        <TextBox Name="tbKadastr" Grid.Row="0" Grid.Column="1"
+                 PreviewTextInput="tbKadastr_PreviewTextInput"
+                 Width="225" Height="30" FontSize="20"
+                 FontFamily="Tahoma"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0"
+                    VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Налоговая ставка" FontSize="20"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       FontFamily="Tahoma"/>
+            <Button Content="?" Margin="2,0,2,0" Name="btnSpravka"
+                    Click="btnSpravka_Click" HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+        </StackPanel>
+        <TextBox Name="tbNalog" Grid.Row="1" Grid.Column="1"
+                 PreviewTextInput="tbNalog_PreviewTextInput"
+                 Width="225" Height="30" FontSize="20"
+                 FontFamily="Tahoma"/>
+        <TextBlock Text="Кол-во месяцев"
+                   FontSize="20" HorizontalAlignment="Center"
+                   VerticalAlignment="Center" FontFamily="Tahoma"
+                   Grid.Row="2" Grid.Column="0"/>
+        <ComboBox Name="cmbMounth" Grid.Row="2" Grid.Column="1"
+                  Width="225" Height="30" FontSize="20"
+                  FontFamily="Tahoma"/>
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2">
+            <Button Content="Рассчитать" Name="btnSchet" Click="btnSchet_Click"
+                    Margin="10" Width="175" Height="40" FontSize="26"
+                    FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Page>

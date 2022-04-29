@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalculateKomNed"
         mc:Ignorable="d"
-        Title="калькулятор налог коммерческой недвижимости" Height="450" Width="800">
+        Title="Калькулятор налога коммерческой недвижимости" Height="450" Width="800"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Background="Aqua">
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Background="#00aeff"/>
+        <Grid Grid.Row="2" Background="#00aeff"/>
+        <Button Content="Назад" Name="btnBack" Click="btnBack_Click"
+                Width="100" Height="20" FontSize="12"
+                FontWeight="Bold" HorizontalAlignment="Right"
+                Margin="5"/>
+        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="Frame"/>
+        <Button Grid.Row="2" Content="Выход" Name="btnQuit" Click="btnQuit_Click"
+                Width="100" Height="20" FontSize="12"
+                FontWeight="Bold" HorizontalAlignment="Center"
+                Margin="5"/>
     </Grid>
 </Window>
