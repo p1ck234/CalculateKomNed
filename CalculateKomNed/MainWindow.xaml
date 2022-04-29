@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalculateKomNed"
         mc:Ignorable="d"
+        Icon="Resources/icon.ico"
         Title="Калькулятор налога коммерческой недвижимости" Height="450" Width="800"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Background="Aqua">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="10*"/>
@@ -19,7 +20,8 @@
                 Width="100" Height="20" FontSize="12"
                 FontWeight="Bold" HorizontalAlignment="Right"
                 Margin="5"/>
-        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="Frame"/>
+        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="Frame"
+               ContentRendered="Frame_ContentRendered"/>
         <Button Grid.Row="2" Content="Выход" Name="btnQuit" Click="btnQuit_Click"
                 Width="100" Height="20" FontSize="12"
                 FontWeight="Bold" HorizontalAlignment="Center"

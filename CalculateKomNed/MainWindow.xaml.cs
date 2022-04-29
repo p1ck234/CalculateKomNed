@@ -29,12 +29,24 @@ namespace CalculateKomNed
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager.MainFrame.GoBack();
         }
 
         private void btnQuit_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
 
+        private void Frame_ContentRendered(object sender, EventArgs e)
+        {
+            if (Frame.CanGoBack)
+            {
+                btnBack.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                btnBack.Visibility = Visibility.Hidden;
+            }
         }
     }
 }

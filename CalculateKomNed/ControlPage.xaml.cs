@@ -32,7 +32,7 @@ namespace CalculateKomNed
 
         private void btnUr_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager.MainFrame.Navigate(new CalculatPage());
         }
     }
 }

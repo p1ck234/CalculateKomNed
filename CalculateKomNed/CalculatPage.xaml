@@ -31,9 +31,9 @@
             <TextBlock Text="Налоговая ставка" FontSize="20"
                        HorizontalAlignment="Center" VerticalAlignment="Center"
                        FontFamily="Tahoma"/>
-            <Button Content="?" Margin="2,0,2,0" Name="btnSpravka"
+            <Button Content="?" Margin="5,0,5,0" Name="btnSpravka"
                     Click="btnSpravka_Click" HorizontalAlignment="Center"
-                    VerticalAlignment="Center"/>
+                    VerticalAlignment="Center" Height="25" Width="25"/>
         </StackPanel>
         <TextBox Name="tbNalog" Grid.Row="1" Grid.Column="1"
                  PreviewTextInput="tbNalog_PreviewTextInput"
